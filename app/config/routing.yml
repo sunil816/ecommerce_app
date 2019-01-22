@@ -1,0 +1,42 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+index:
+    path: /test
+    defaults: { _controller: AppBundle:Product:index }
+
+createProducts:
+    path: /createProducts
+    defaults: { _controller: AppBundle:Product:createProducts}
+    methods: [POST]
+
+updateProducts:
+    path: /updateProducts
+    defaults: { _controller: AppBundle:Product:updateProducts}
+    methods: [PUT]
+
+deleteProducts:
+    path: /deleteProducts
+    defaults: { _controller: AppBundle:Product:deleteProducts}
+    methods: [PUT]
+
+getProducts:
+    path: /products
+    defaults: { _controller: AppBundle:Product:getProducts}
+    methods: [GET]
+
+createOrder:
+    path: /createOrder
+    defaults: { _controller: AppBundle:Order:createOrder}
+    methods: [POST]
+
+viewOrders:
+    path: /orders
+    defaults: { _controller: AppBundle:Order:viewOrders}
+    methods: [GET]
+
+createUsers:
+    path: /createUsers
+    defaults: { _controller: AppBundle:User:createUsers}
+    methods: [POST]
